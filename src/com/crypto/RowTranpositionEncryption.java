@@ -26,7 +26,6 @@ public class RowTranpositionEncryption {
 		
 		key = key.toUpperCase();
 		String M = "";
-		//int y = Message.length();
 		for (int i = 0; i < Message.length(); i++) {
 			if (Message.charAt(i) == ' ') {
 				continue;
@@ -55,18 +54,9 @@ public class RowTranpositionEncryption {
 		for (int i = 0; i < key.length(); i++) {
 			m.put(key.charAt(i), i);
 		}
-		/*char cipher1[][] = new char[key.length()][M.length() / key.length()];
-		for (int i = 0; i < key.length(); i++) {
-			for (int j = 0; j < M.length() / key.length(); j++) {
-
-				cipher1[i][j] = cipher[j][i];
-			}
-		}
-		*/
 		String FinalCipher = "";
 		for (Map.Entry<Character, Integer> val : m.entrySet()) {
 			int val1 = val.getValue();
-			//System.out.print(val1);
 			for (int j = 0; j < M.length() / key.length(); j++) {
 				FinalCipher += cipher[j][val1];
 			}

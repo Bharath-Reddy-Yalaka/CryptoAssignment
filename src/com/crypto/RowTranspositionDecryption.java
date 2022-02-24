@@ -33,25 +33,12 @@ public class RowTranspositionDecryption {
 				count++;
 			}
 		}
-		/*for(int i =0; i<key.length();i++ ){
-			for(int j=0;j<cipher.length()/key.length();j++){
-				System.out.print(decrypt[i][j]);
-			}
-			System.out.println();
-		}*/
-		//char decrypt1[][] = new char[cipher.length()/key.length()][key.length()];
 		String str = "";
 		for(int i=0; i<cipher.length()/key.length();i++){
 			for(int j=0;j<key.length();j++){
 				str+= decrypt[j][i];
 			}
 		}
-		/*String str ="";
-		for(int i=0; i<cipher.length()/key.length();i++){
-			for(int j=0;j<key.length();j++){
-				str+=decrypt1[i][j];
-			}
-		}*/
 		return str;
 	}
 
