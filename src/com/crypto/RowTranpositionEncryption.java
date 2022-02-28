@@ -1,24 +1,25 @@
 package com.crypto;
 
+
 import java.util.Map;
+import java.util.Scanner;
 import java.util.TreeMap;
 
-public class RowTranpositionEncryption {
+class RowTranpositionEncryption {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*
-		 String Message =
-		 "CRYPTOLOGY IS THE PRACTICE AND STUDY OF TECHNIQUES " +
-		 "FOR SECURE COMMUNICATION IN THE PRESENCE OF " +
-		 "THIRD PARTIES CALLED ADVERSARIES";*/
 		
-		
-		String Message = "I am bharath reddy";
-		String key = "NYIT";
+		System.out.println("Provide the plain text to be Encrypted");
+		Scanner sc1 = new Scanner(System.in);
+		String Message = sc1.nextLine();
+		System.out.println("provide the key to Encrypt the text");
+		Scanner sckey1 = new Scanner(System.in);
+		String key = sckey1.nextLine();
+
 		RowTranpositionEncryption RTE = new RowTranpositionEncryption();
 		String FinalCipher = RTE.rowTransposeEncrypt(Message, key);
-		System.out.println(FinalCipher);
+		System.out.println("Cipher text for given plain text is - "+" "+FinalCipher);
 		
 	}
 

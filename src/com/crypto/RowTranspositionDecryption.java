@@ -1,20 +1,23 @@
 package com.crypto;
 
 import java.util.Map;
+import java.util.Scanner;
 import java.util.TreeMap;
 
 public class RowTranspositionDecryption {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*String cipher = "eroohalpsmeptroohalsefxphtnlefhhxtwstiiiieoec"
-				+ "rastitosplmgeasentmitrasnefylypnhiasnetoiroitaetaxoeet"
-				+ "onicrasetltesnicrfwmurnhrrhitrcrxhtpipsrmaimiitpiphlaleiucciptotpe";*/
-		String cipher = "mrryihtdbaexaahd";
-		String key = "NYIT";
+
+		System.out.println("Provide the cipher text to be decrypted");
+		Scanner sc = new Scanner(System.in);
+		String cipher = sc.next();
+		System.out.println("provide the key to decrypt the text");
+		Scanner sckey = new Scanner(System.in);
+		String key = sckey.next();
 		RowTranspositionDecryption RTD = new RowTranspositionDecryption();
 		String Text = RTD.rowTransposeDecrypt(cipher, key);
-		System.out.println(Text);
+		System.out.println("Text for given cipher text is - "+Text);
 		
 	}
 	
